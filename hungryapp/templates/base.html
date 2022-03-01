@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
-    {% include 'head.html' %}
-    <body>
-        <a class="button" href="{% url 'new' %}">새 리뷰 쓰기</a>
-        <a class="button" href="{% url 'categories' %}">카테고리 보기</a>
-        
-        {% include 'header.html' %}
+  {% include 'head.html' %}
+  <body>
+    <div class="categories">
+      <p><a href="{% url 'all' %}">전체</a></p>
+      <p><a href="{% url 'lists' board_category='KR' %}">한식</a></p>
+      <p><a href="{% url 'lists' board_category='EA' %}">양식</a></p>
+      <p><a href="{% url 'lists' board_category='CH' %}">중식</a></p>
+      <p><a href="{% url 'lists' board_category='JP' %}">일식</a></p>
+      <p><a href="{% url 'lists' board_category='SF' %}">분식</a></p>
+      <p><a href="{% url 'lists' board_category='BR' %}">베이커리</a></p>
+      <p><a href="{% url 'lists' board_category='BEV' %}">커피음료</a></p>
+      <p><a href="{% url 'lists' board_category='OTHERS' %}">그외</a></p>
+    </div>
 
-        {% block content %}
-        {% endblock %}
-    </body>
+    <a class="button" href="{% url 'new' %}">새 리뷰 쓰기</a>
+
+    {% include 'header.html' %}
+    <div class="contents">{% block content %} {% endblock %}</div>
+  </body>
 </html>

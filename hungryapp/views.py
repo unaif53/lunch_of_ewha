@@ -7,7 +7,7 @@ from .models import Board
 
 def home(request):
     board = Board.objects
-    return render(request, 'categories.html', {'boards' : board})
+    return render(request, 'all.html', {'boards' : board})
 
 def lists(request, board_category):
     boards = Board.objects.filter(category=board_category)
@@ -28,7 +28,7 @@ def create(request):
     board.body = request.GET['body']
     board.pub_date = timezone.datetime.now()
     board.save()
-    return redirect('/board/' + str(board.id) + '/')
+    return redirect('/board/' + str(board.id))
     
 def delete(request, board_id):
     board = Board.objects.get(pk=board_id)
@@ -48,4 +48,4 @@ def update(request, board_id):
     board.body = request.GET['body']
     board.pub_date = timezone.datetime.now()
     board.save()
-    return redirect('/board/' + str(board.id) + '/')
+    return redirect('/board/' + str(board.id))
