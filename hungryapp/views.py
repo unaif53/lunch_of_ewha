@@ -7,7 +7,7 @@ from .models import Board
 
 def home(request):
     board = Board.objects
-    return render(request, 'all.html', {'boards' : board})
+    return render(request, 'home.html', {'boards' : board})
 
 def lists(request, board_category):
     boards = Board.objects.filter(category=board_category)

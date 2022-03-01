@@ -19,7 +19,7 @@ import hungryapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', hungryapp.views.home, name='all'),
+    path('', hungryapp.views.home, name='home'),
     path('board/<board_category>/', hungryapp.views.lists, name='lists'),
     path('board/<int:board_id>', hungryapp.views.detail, name='detail'),
     path('board/new', hungryapp.views.new, name='new'),
