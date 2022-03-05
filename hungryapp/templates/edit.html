@@ -6,13 +6,13 @@
     <form action="{% url 'update' board.id %}">
         <h2>카테고리: 
             <select name="category">
-                <option value="KR" {% if board.category == "KR" %} selected="selected"{% endif %}>한식</option>
-                <option value="EA" {% if board.category == "EA" %} selected="selected"{% endif %}>양식</option>
-                <option value="CH" {% if board.category == "CH" %} selected="selected"{% endif %}>중식</option>
-                <option value="JP" {% if board.category == "JP" %} selected="selected"{% endif %}>일식</option>
-                <option value="SF" {% if board.category == "SF" %} selected="selected"{% endif %}>분식</option>
-                <option value="BR" {% if board.category == "BR" %} selected="selected"{% endif %}>베이커리</option>
-                <option value="BEV" {% if board.category == "BEV" %} selected="selected"{% endif %}>커피음료</option>
+                <option value="KOREAN" {% if board.category == "KOREAN" %} selected="selected"{% endif %}>한식</option>
+                <option value="WESTERN" {% if board.category == "WESTERN" %} selected="selected"{% endif %}>양식</option>
+                <option value="CHINESE" {% if board.category == "CHINESE" %} selected="selected"{% endif %}>중식</option>
+                <option value="JAPANESE" {% if board.category == "JAPANESE" %} selected="selected"{% endif %}>일식</option>
+                <option value="SCHOOL FOOD" {% if board.category == "SCHOOL FOOD" %} selected="selected"{% endif %}>분식</option>
+                <option value="BAKERY" {% if board.category == "BAKERY" %} selected="selected"{% endif %}>베이커리</option>
+                <option value="BEVERAGE" {% if board.category == "BEVERAGE" %} selected="selected"{% endif %}>커피음료</option>
                 <option value="OTHERS" {% if board.category == "OTHERS" %} selected="selected"{% endif %}>그외</option>
             </select>
         </h2>

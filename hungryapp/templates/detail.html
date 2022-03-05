@@ -4,10 +4,15 @@
 <div class="container">
   <p>{{ board_detail.category }}</p>
   <h1 class="title">{{ board_detail.title }}</h1>
-  <p>{{ board_detail.pub_date }}</p>
-  <p>{{ board_detail.points }}</p>
+  <p>[ #{{ board_detail.points }} ]  </p>
   <p>{{ board_detail.body }}</p>
-  <a href="{% url 'home' %}">홈으로</a>
+  <br>
+  <p class="pubdate">{{ board_detail.pub_date }} </p>
+  <p>
+    <a href="{% url 'delete' board_detail.id %}" style="text-decoration: none;">[삭제]</a>
+    <a href="{% url 'edit' board_detail.id %}" style="text-decoration: none;">[수정]</a>
+    <a href="{% url 'home' %}">[홈으로]</a>
+  </p>
 </div>
 
 {% endblock %}

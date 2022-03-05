@@ -6,13 +6,13 @@ from django import forms
 
 class Board(models.Model):
     FOOD_CATEGORY = [
-        ('KR', '한식'), 
-        ('EA', '양식'), 
-        ('CH', '중식'), 
-        ('JP', '일식'), 
-        ('SF', '분식'), 
-        ('BR', '베이커리'), 
-        ('BEV', '커피음료'), 
+        ('KOREAN', '한식'), 
+        ('WESTERN', '양식'), 
+        ('CHINESE', '중식'), 
+        ('JAPANESE', '일식'), 
+        ('SCHOOL FOOD', '분식'), 
+        ('BAKERY', '베이커리'), 
+        ('BEVERAGE', '커피음료'), 
         ('OTHERS', '그외'),
     ]
     REVIEW_POINT_CHOICES = [
