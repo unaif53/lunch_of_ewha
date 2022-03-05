@@ -2,21 +2,49 @@
 <html lang="ko">
   {% include 'head.html' %}
   <body>
-    <h1>오늘 뭐먹지???</h1>
-    <div class="categories">
-      <p><a href="{% url 'home' %}">전체</a></p>
-      <p><a href="{% url 'lists' board_category='KR' %}">한식</a></p>
-      <p><a href="{% url 'lists' board_category='EA' %}">양식</a></p>
-      <p><a href="{% url 'lists' board_category='CH' %}">중식</a></p>
-      <p><a href="{% url 'lists' board_category='JP' %}">일식</a></p>
-      <p><a href="{% url 'lists' board_category='SF' %}">분식</a></p>
-      <p><a href="{% url 'lists' board_category='BR' %}">베이커리</a></p>
-      <p><a href="{% url 'lists' board_category='BEV' %}">커피음료</a></p>
-      <p><a href="{% url 'lists' board_category='OTHERS' %}">그외</a></p>
+    <div class="web-title">
+      <h1>오늘 뭐먹지???</h1>
     </div>
-
-    <a class="button" href="{% url 'new' %}">새 리뷰 쓰기</a>
-
-    <div class="contents">{% block content %} {% endblock %}</div>
+    <div class="columns">
+      <div class="column is-1"></div>
+      <div class="contents, column is-three-quarters">
+        {% block content %} {% endblock %}
+      </div>
+      <div class="column">
+        <div class="categories">
+          <p class="category">- <a href="{% url 'home' %}">전체</a></p>
+          <p class="category">
+            - <a href="{% url 'lists' board_category='KR' %}">한식</a>
+          </p>
+          <p class="category">
+            - <a href="{% url 'lists' board_category='EA' %}">양식</a>
+          </p>
+          <p class="category">
+            - <a href="{% url 'lists' board_category='CH' %}">중식</a>
+          </p>
+          <p class="category">
+            - <a href="{% url 'lists' board_category='JP' %}">일식</a>
+          </p>
+          <p class="category">
+            - <a href="{% url 'lists' board_category='SF' %}">분식</a>
+          </p>
+          <p class="category">
+            - <a href="{% url 'lists' board_category='BR' %}">베이커리</a>
+          </p>
+          <p class="category">
+            - <a href="{% url 'lists' board_category='BEV' %}">커피음료</a>
+          </p>
+          <p class="category">
+            - <a href="{% url 'lists' board_category='OTHERS' %}">그외</a>
+          </p>
+          <br />
+          <br />
+          <a class="button is-link is-light" href="{% url 'new' %}"
+            >새 리뷰 쓰기</a
+          >
+        </div>
+      </div>
+      <div class="column"></div>
+    </div>
   </body>
 </html>
