@@ -6,48 +6,50 @@
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
   />
   <style>
-    .web-title {
-      height: 180px;
-      text-align: center;
-      background: linear-gradient(
-        to bottom,
-        rgba(184, 184, 255, 0.5),
-        rgba(255, 238, 221, 0.5)
-      );
+    @font-face {
+      font-family: "HoengseongHanu";
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/HoengseongHanu.woff")
+        format("woff");
+      font-weight: normal;
+      font-style: normal;
     }
 
-    .web-title h1 {
-      padding-top: 40px;
-      font-size: 60px;
-      color: black;
-      font-family: "Courier New", Courier, monospace; /*글씨체 바꿀 때 여기만 바꾸면 됨*/
+    @font-face {
+      font-family: "IM_Hyemin-Regular";
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2")
+        format("woff");
+      font-weight: normal;
+      font-style: normal;
     }
 
-    .categories {
-      position: -webkit-sticky;
-      position: fixed;
-      border: 2px dashed gray;
-      border-radius: 5px;
-      margin-top: 40px;
-      padding: 15px;
+    .banner img {
+      width: 80%;
+      margin-left: 10%;
     }
 
-    .category {
-      font-size: 20px;
+    #new {
+      color: lightcoral;
     }
 
-    .categories a {
-      font-family: "Courier New", Courier, monospace; /*글씨체 바꿀 때 여기만 바꾸면 됨*/
+    #category a {
+      font-family: "HoengseongHanu"; /*글씨체 바꿀 때 여기만 바꾸면 됨*/
+    }
+
+    .contents {
+      width: 80%;
+      margin-left: 10%;
     }
 
     .container {
       position: -webkit-sticky;
       border: 2px dashed gray;
       border-radius: 5px;
-      margin-top: 15px;
       padding: 15px;
-      font-family: "Courier New", Courier, monospace; /*글씨체 바꿀 때 여기만 바꾸면 됨*/
+      font-family: "IM_Hyemin-Regular"; /*글씨체 바꿀 때 여기만 바꾸면 됨*/
     }
 
+    .container .button {
+      font-family: "IM_Hyemin-Regular";
+    }
   </style>
 </head>
